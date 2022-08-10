@@ -18,3 +18,15 @@ header, main, footer {
   main {
     flex: 1 0 auto;
   }
+
+  .pet-shop-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+  }
