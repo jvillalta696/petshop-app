@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut}from '@angular/fire/auth'
+import {Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,}from '@angular/fire/auth'
 import { createUrlTreeFromSnapshot } from '@angular/router';
 
 @Injectable({
@@ -17,5 +17,9 @@ export class UserAuthService {
   }
   signout(){
     return signOut(this.auth);
+  }
+
+  getCurrentUser(){
+    return this.auth.currentUser
   }
 }
