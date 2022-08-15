@@ -13,6 +13,7 @@ import { SideNavComponent } from './Componets/side-nav/side-nav.component';
 import { ErrorPageComponent } from './Views/error-page/error-page.component';
 import { NotFoundComponent } from './Views/not-found/not-found.component';
 import { SignInComponent } from './Views/sign-in/sign-in.component';
+import { DashboardComponent } from './Views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SignInComponent } from './Views/sign-in/sign-in.component';
     SideNavComponent,
     ErrorPageComponent,
     NotFoundComponent,
-    SignInComponent
+    SignInComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
