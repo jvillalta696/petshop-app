@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pet-shop-project-67f49": {
+      "hosting": {
+        "petshop-app": [
+          "pet-shop-project-67f49"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pet-shop-project-67f49"
+  }
+}
