@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserAuthService} from '../../Services/user-auth.service'
+import * as M from "materialize-css";
 
 @Component({
   selector: 'app-side-nav',
@@ -13,6 +14,8 @@ correo?:any;
   }
 
   ngOnInit(): void {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
   }
   
 }
