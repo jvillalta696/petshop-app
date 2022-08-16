@@ -43,6 +43,8 @@ export class LoginComponent implements OnInit {
     this.userAuth.signup(this.user)
     .then(res=>{
       console.log(res)
+      alert('SignUp Successfully'),
+      this.router.navigate([''])
       
     })
     .catch(err=>{
