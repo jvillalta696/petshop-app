@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "petshop-app:build:production",
+            "firebaseProject": "pet-shop-project-67f49",
+            "firebaseHostingSite": "pet-shop-project-67f49"
+          }
         }
       }
     }

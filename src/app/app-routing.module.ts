@@ -7,6 +7,7 @@ import { PetAdopterComponent } from './Views/pet-adopter/pet-adopter.component';
 import { PetshopComponent } from './Views/petshop/petshop.component';
 import { SignInComponent } from './Views/sign-in/sign-in.component';
 import { UserprofileComponent } from './Views/userprofile/userprofile.component';
+import { canActivate,redirectUnauthorizedTo } from '@angular/fire/auth-guard/'
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
   {
     path:"",
     component:DashboardComponent,
+    ...canActivate(()=>redirectUnauthorizedTo(['login'])),
     children:[
       {
         path:"petadopter",

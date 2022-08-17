@@ -14,6 +14,11 @@ import { ErrorPageComponent } from './Views/error-page/error-page.component';
 import { NotFoundComponent } from './Views/not-found/not-found.component';
 import { SignInComponent } from './Views/sign-in/sign-in.component';
 import { DashboardComponent } from './Views/dashboard/dashboard.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,11 @@ import { DashboardComponent } from './Views/dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
