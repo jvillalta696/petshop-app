@@ -14,6 +14,10 @@ import { ErrorPageComponent } from './Views/error-page/error-page.component';
 import { NotFoundComponent } from './Views/not-found/not-found.component';
 import { SignInComponent } from './Views/sign-in/sign-in.component';
 import { DashboardComponent } from './Views/dashboard/dashboard.component';
+import { AdoptingTitleComponent } from './Componets/adopting-title/adopting-title.component';
+import { AdoptingInstructionsComponent } from './Componets/adopting-instructions/adopting-instructions.component';
+import { AdoptingCardComponent } from './Componets/adopting-card/adopting-card.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,10 @@ import { DashboardComponent } from './Views/dashboard/dashboard.component';
     ErrorPageComponent,
     NotFoundComponent,
     SignInComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdoptingTitleComponent,
+    AdoptingInstructionsComponent,
+    AdoptingCardComponent
   ],
   imports: [
     BrowserModule,
