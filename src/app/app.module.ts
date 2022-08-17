@@ -19,6 +19,9 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdoptingCardComponent } from './Componets/adopting-card/adopting-card.component';
+import { AdoptingInstructionsComponent } from './Componets/adopting-instructions/adopting-instructions.component';
+import { AdoptingTitleComponent } from './Componets/adopting-title/adopting-title.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     ErrorPageComponent,
     NotFoundComponent,
     SignInComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdoptingCardComponent,
+    AdoptingInstructionsComponent,
+    AdoptingTitleComponent
+
   ],
   imports: [
     BrowserModule,
