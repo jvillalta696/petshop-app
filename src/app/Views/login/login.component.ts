@@ -9,9 +9,11 @@ import {UserAuthService} from '../../Services/user-auth.service'
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   loginForm:FormGroup;
   user:UserAuth;
+  
   constructor(
     private userAuth:UserAuthService,
     private router:Router) { 
@@ -50,7 +52,5 @@ export class LoginComponent implements OnInit {
     .catch(err=>{
       console.log(err);     
     })
-
   }
-
 }
