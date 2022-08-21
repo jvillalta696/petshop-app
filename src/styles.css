@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+  }
+
 header, main, footer {
     padding-left: 300px;
   }
@@ -30,3 +36,17 @@ header, main, footer {
     width: 250px;
     object-fit: cover;
   }
+
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-recent-items {
+    padding-left: 40px;
+  }
+
+  .profile-recent-adoptions {
+    padding-left: 40px;
+  }
+
