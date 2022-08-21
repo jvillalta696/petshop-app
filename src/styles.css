@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+  }
+
 header, main, footer {
     padding-left: 300px;
   }
@@ -19,16 +25,6 @@ header, main, footer {
     flex: 1 0 auto;
   }
 
-  .pet-shop-container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-  }
 
 
 
-
-
-
-  
- 
