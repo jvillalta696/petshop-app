@@ -2,8 +2,8 @@
 <app-adopting-instructions type="any" text="Check out our beautiful friends and give them a chance to have a home and a better life. For more information about them, please press the three dot button."></app-adopting-instructions>
 <div class="pet-adopter-container">
     <div class="row">
-        <div class="col s12 m4">
-            <app-adopting-card [data]="pets"></app-adopting-card>
+        <div class="col s12 m4"*ngFor="let pet of pets">
+            <app-adopting-card [data]="pet"></app-adopting-card>
         </div>
     </div>
 </div>
