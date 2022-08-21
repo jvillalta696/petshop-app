@@ -1,0 +1,13 @@
+
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-recent-items {
+    padding-left: 40px;
+  }
+
+  .profile-recent-adoptions {
+    padding-left: 40px;
+  }
