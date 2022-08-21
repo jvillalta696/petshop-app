@@ -28,8 +28,6 @@ id?:string;
     this.userProfileService.getUserProfile(this.id).subscribe((user)=>{
       this.user = user
     })
-
-
   }
   signout(){
     this.userAuth.signout()

@@ -5,7 +5,7 @@ export interface UserProfile {
     birthday:string,
     email:string,
     fullName:string,
-    listPetAdoptions?:Pet[],
-    listPetItems?:Product[],
+    listPetAdoptions?:any[],
+    listPetItems?:any[],
 }
 

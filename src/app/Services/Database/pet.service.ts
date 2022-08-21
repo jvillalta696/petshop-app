@@ -35,8 +35,8 @@ export class PetService {
     return deleteDoc(petRef);
   }
 
-  updatePets(id: string, pet:any) {
-    const petRef = doc(this.firestore, `PetShopItems/${id}`);
+  updatePets( pet:any,id?: string,) {
+    const petRef = doc(this.firestore, `PetAdopter/${id}`);
     return updateDoc(petRef,pet);
   }
 }
