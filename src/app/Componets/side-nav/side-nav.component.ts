@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserAuthService} from '../../Services/user-auth.service'
+import { Router } from '@angular/router';
 import * as M from "materialize-css";
 
 @Component({
@@ -9,7 +10,9 @@ import * as M from "materialize-css";
 })
 export class SideNavComponent implements OnInit {
 correo?:any;
-  constructor(private userAuth:UserAuthService) { 
+  constructor(
+    private userAuth:UserAuthService,
+    private router: Router) { 
     this.correo = userAuth.getCurrentUser()?.email
   }
 
@@ -17,5 +20,10 @@ correo?:any;
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems);
   }
-  
+  signout(){
+    this.userAuth.signout()
+    .then(()=>this.router.navigate(['login']))
+    .catch(error=>console.log(error))
+  }
+
 }
