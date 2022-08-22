@@ -10,34 +10,34 @@
         <div >
             <h6 style="font-size: 35px; color: #F1CBB1;"><b>Create an account</b></h6>
         </div>
-        <form class="col s12">            
+        <form class="col s12" [formGroup]="formulario">            
               <div class="input-field col s12">
                 <i class="material-icons prefix">person</i>
-                <input id="icon_person" type="text" class="validate">
+                <input id="icon_person" formControlName="fullName" type="text" class="validate">
                 <label for="icon_person">Full name</label>
               </div>
               <div class="input-field col s6">
                 <i class="material-icons prefix">cake</i>
-                <input id="con_cake" type="text" class="validate">
+                <input id="con_cake" formControlName="dateBirth" type="text" class="validate">
                 <label for="con_cake">Date of birth</label>
               </div>  
               <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="con_account_circle" type="text" class="validate">
+                <input id="con_account_circle" formControlName="username" type="text" class="validate">
                 <label for="con_account_circle">Username</label>
               </div>   
               <div class="input-field col s6">
                 <i class="material-icons prefix">vpn_key</i>
-                <input id="icon_vpn_key" type="password" class="validate">
+                <input id="icon_vpn_key" formControlName="password" type="password" class="validate">
                 <label for="icon_vpn_key">Password</label>
               </div>   
               <div class="input-field col s6">
                 <i class="material-icons prefix">email</i>
-                <input id="con_email" type="text" class="validate">
+                <input id="con_email" formControlName="email" type="text" class="validate">
                 <label for="con_email">Email</label>
               </div>   
               <div class="row">                
-                <div class="col s12 m12"><a class="waves-effect waves-light btn"><i class="material-icons left">person_add</i>Registrar</a></div>
+                <div class="col s12 m12"><a class="waves-effect waves-light btn" (click)="[onSubmit()]"><i class="material-icons left">person_add</i>Crear cuenta</a></div>
               </div>         
         </form>      
     </div>
