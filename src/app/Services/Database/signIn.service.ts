@@ -19,8 +19,8 @@ export class SignInService {
     return addDoc(userRef, signIn);
   }
 
-  getUser(): Observable<SignIn[]>{
-    const userRef = collection(this.firestore, 'UserProfile');
-    return collectionData(userRef, { idField: 'id'}) as Observable<SignIn[]>;
-  }
+  // getUser(): Observable<SignIn[]>{
+  //   const userRef = collection(this.firestore, 'UserProfile');
+  //   return collectionData(userRef, { idField: 'id'}) as Observable<SignIn[]>;
+  // }
 }
