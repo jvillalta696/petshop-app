@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { SignIn } from 'src/app/Interfaces/signIn';
-import { SignInService } from '../../Services/Database/signIn.service';
+import { SignInService } from '../../Services/Database/signin.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class SignInComponent implements OnInit {
   formulario: FormGroup;
 
-  constructor(private signIn: SignInService, private router:Router) { 
+  constructor(private signin: SignInService, private router:Router) { 
     this.formulario = new FormGroup({
       fullName: new FormControl(),
       dateBirth: new FormControl(),
@@ -26,7 +26,7 @@ export class SignInComponent implements OnInit {
 
   async onSubmit(){
     console.log(this.formulario.value);
-    const resp = await this.signIn.addUser(this.formulario.value)
+    const resp = await this.signin.addUser(this.formulario.value)
     .then(res=>{
       console.log(res)
       alert('Create Account Successfully'),
