@@ -35,7 +35,7 @@ export class ProductService {
     return deleteDoc(productRef);
   }
 
-  updateProducts(id: string, product:any) {
+  updateProducts( product:any,id?: string) {
     const productRef = doc(this.firestore, `PetShopItems/${id}`);
     return updateDoc(productRef,product);
   }

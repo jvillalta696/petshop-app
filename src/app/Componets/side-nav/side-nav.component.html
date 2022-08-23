@@ -4,7 +4,7 @@
         <img src="https://materializecss.com/images/office.jpg" alt="">
       </div>
       <a class="sidenav-close" routerLink="userprofile"><img class="circle" src="https://materializecss.com/images/yuna.jpg" alt=""></a>
-      <a class="sidenav-close" routerLink="userprofile"><span class="white-text name">John Doe</span></a>
+      <a class="sidenav-close" routerLink="userprofile"><span class="white-text name">{{user?.fullName}}</span></a>
       <a class="sidenav-close" routerLink="userprofile"><span class="white-text email">{{correo}}</span></a>
     </div></li>
     <li><a class="sidenav-close" routerLink="petshop"><i class="material-icons">pets</i>PetShop</a></li>

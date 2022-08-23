@@ -1,7 +1,9 @@
 export interface Pet {
-    avatar: string,
-    name: string,
-    link: string,
-    nameTwo:string,
-    description: string
+    id:string,
+    avatar?: string,
+    name?: string,
+    link?: string,
+    nameTwo?:string,
+    description?: string,
+    status?:boolean
 }
