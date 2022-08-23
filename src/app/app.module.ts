@@ -24,6 +24,7 @@ import { AdoptingInstructionsComponent } from './Componets/adopting-instructions
 import { AdoptingTitleComponent } from './Componets/adopting-title/adopting-title.component';
 import { PetshopCardComponent } from './Componets/petshop-card/petshop-card.component';
 import { InfoUserComponent } from './Componets/info-user/info-user.component';
+import { TableAdopterComponent } from './Componets/table-adopter/table-adopter.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { InfoUserComponent } from './Componets/info-user/info-user.component';
     AdoptingInstructionsComponent,
     AdoptingTitleComponent,
     PetshopCardComponent,
-    InfoUserComponent
+    InfoUserComponent,
+    TableAdopterComponent
 
   ],
   imports: [

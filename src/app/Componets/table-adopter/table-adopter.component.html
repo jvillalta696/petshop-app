@@ -1,0 +1,17 @@
+<table class="centered striped">
+  <thead>
+    <tr>
+      <th>Photo</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let pet of data?.listPetAdoptions">
+      <td><img src="{{ pet.avatar }}" alt="" /></td>
+      <td>{{ pet.name }}</td>
+      <td>{{ pet.description }}</td>
+    </tr>
+  </tbody>
+</table>
