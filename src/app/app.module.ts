@@ -25,6 +25,7 @@ import { AdoptingTitleComponent } from './Componets/adopting-title/adopting-titl
 import { PetshopCardComponent } from './Componets/petshop-card/petshop-card.component';
 import { InfoUserComponent } from './Componets/info-user/info-user.component';
 import { TableAdopterComponent } from './Componets/table-adopter/table-adopter.component';
+import { TableShopComponent } from './Componets/table-shop/table-shop.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { TableAdopterComponent } from './Componets/table-adopter/table-adopter.c
     AdoptingTitleComponent,
     PetshopCardComponent,
     InfoUserComponent,
-    TableAdopterComponent
+    TableAdopterComponent,
+    TableShopComponent
 
   ],
   imports: [
