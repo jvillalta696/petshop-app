@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Firestore, collection, addDoc, collectionData, doc,  deleteDoc, updateDoc, } from '@angular/fire/firestore';
+import {Firestore, collection, addDoc, setDoc, collectionData, doc,  deleteDoc, updateDoc, } from '@angular/fire/firestore';
 import { User } from '@firebase/auth';
 import { Observable } from 'rxjs';
 import {SignIn}from '../../Interfaces/signIn'
@@ -14,9 +14,9 @@ export class SignInService {
 
   constructor(private firestore: Firestore) { }
 
-  addUser(signIn: SignIn) {
+  addUser(signIn: SignIn,id:string) {
     const userRef = collection(this.firestore, 'UserProfile');
-    return addDoc(userRef, signIn);
+    return setDoc(doc(userRef, id),signIn);
   }
 
   // getUser(): Observable<SignIn[]>{

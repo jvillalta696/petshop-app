@@ -3,6 +3,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { SignIn } from 'src/app/Interfaces/signIn';
 import { SignInService } from '../../Services/Database/signIn.service';
 import { Router } from '@angular/router';
+import { UserAuth } from 'src/app/Interfaces/user-auth';
+import {UserAuthService} from '../../Services/user-auth.service'
 
 @Component({
   selector: 'app-sign-in',
@@ -11,8 +13,12 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
   formulario: FormGroup;
-
-  constructor(private signin: SignInService, private router:Router) { 
+  user:UserAuth;
+  uProfile:SignIn;
+  constructor(
+    private signin: SignInService, 
+    private userAuth: UserAuthService,
+    private router:Router) { 
     this.formulario = new FormGroup({
       fullName: new FormControl(),
       dateBirth: new FormControl(),
@@ -20,22 +26,32 @@ export class SignInComponent implements OnInit {
       password: new FormControl(),
       email: new FormControl(),
     })
+    this.user = {email:'',psw:''}
+    this.uProfile ={      
+    }
   }
 
   ngOnInit(): void {}
 
+  
+  
   async onSubmit(){
-    console.log(this.formulario.value);
-    const resp = await this.signin.addUser(this.formulario.value)
-    .then(res=>{
-      console.log(res)
-      alert('Create Account Successfully'),
-      this.router.navigate([''])
-      
-    })
-    .catch(err=>{
-      console.log(err);     
-    })
-  }
+    try {
+      this.uProfile = this.formulario.value;
+    this.user.email = this.uProfile.email;
+    this.user.psw = this.uProfile.password;
+    const res = await this.userAuth.signup(this.user);
+    this.uProfile.id = res.user.uid;
+    const resp = await this.signin.addUser(this.uProfile, res.user.uid);
+    console.log(resp)
+    alert('Create Account Successfully');
+    this.router.navigate(['']);
+    } catch (error) {
+      console.log(error)
+    }
+    
+  }  
+  
+  
 
 }

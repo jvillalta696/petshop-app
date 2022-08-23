@@ -23,6 +23,7 @@ import { AdoptingCardComponent } from './Componets/adopting-card/adopting-card.c
 import { AdoptingInstructionsComponent } from './Componets/adopting-instructions/adopting-instructions.component';
 import { AdoptingTitleComponent } from './Componets/adopting-title/adopting-title.component';
 import { PetshopCardComponent } from './Componets/petshop-card/petshop-card.component';
+import { InfoUserComponent } from './Componets/info-user/info-user.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PetshopCardComponent } from './Componets/petshop-card/petshop-card.comp
     AdoptingCardComponent,
     AdoptingInstructionsComponent,
     AdoptingTitleComponent,
-    PetshopCardComponent
+    PetshopCardComponent,
+    InfoUserComponent
 
   ],
   imports: [

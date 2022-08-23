@@ -1,5 +1,5 @@
 export interface IAdoptingCard {
-    id:string,
+    id?:string,
     avatar?: string,
     name?: string,
     link?: string,

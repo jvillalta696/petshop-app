@@ -1,10 +1,10 @@
-import { Pet } from "./pet";
-import { Product } from "./product";
-
 export interface UserProfile { 
-    birthday:string,
-    email:string,
-    fullName:string,
+    id?:string,
+    birthday?:string,
+    email?:string,
+    fullName?:string,
+    username?:string,
+    password?:string,
     listPetAdoptions?:any[],
     listPetItems?:any[],
 }

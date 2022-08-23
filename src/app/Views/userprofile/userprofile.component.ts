@@ -9,16 +9,21 @@ import { UserProfile } from '../../Interfaces/user-profile';
   styleUrls: ['./userprofile.component.css'],
 })
 export class UserprofileComponent implements OnInit {
-  user?: UserProfile;
+  user: UserProfile;
   id?: string;
   constructor(
     private auth: UserAuthService,
     private userProfile: UserProfileService
   ) {
     this.id = auth.getCurrentUser()?.uid;
+    this.user = {}
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userProfile.getUserProfile(this.id).subscribe((user)=>{
+      this.user = user
+    })
+  }
   prueba() {
     this.userProfile.getUserProfile(this.id).subscribe((user)=>{
       this.user = user
