@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdoptingCardComponent } from './Componets/adopting-card/adopting-card.component';
 import { AdoptingInstructionsComponent } from './Componets/adopting-instructions/adopting-instructions.component';
 import { AdoptingTitleComponent } from './Componets/adopting-title/adopting-title.component';
+import { PetshopCardComponent } from './Componets/petshop-card/petshop-card.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AdoptingTitleComponent } from './Componets/adopting-title/adopting-titl
     DashboardComponent,
     AdoptingCardComponent,
     AdoptingInstructionsComponent,
-    AdoptingTitleComponent
+    AdoptingTitleComponent,
+    PetshopCardComponent
 
   ],
   imports: [
