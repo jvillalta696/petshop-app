@@ -28,11 +28,11 @@ export class LoginComponent implements OnInit {
     this.userAuth
       .signin(this.user)
       .then((res) => {
-        console.log(res);
-        alert('Login Successfully'), this.router.navigate(['']);
+        this.router.navigate(['']);
       })
       .catch((err) => {
-        console.log(err);
+        M.toast({html: err.toString(),classes: 'rounded red darken-1'})
+        console.log(err)
       });
   }
 

@@ -34,7 +34,7 @@ export class PetshopCardComponent implements OnInit {
       this.currentUser
         .updateUserProfile({ listPetItems: [this.data] }, this.id)
         .then(() => {
-          M.toast({html: 'Purchase successful!',classes: 'rounded'})
+          M.toast({html: 'Purchase successful!',classes: 'rounded teal'})
         });
     } else {
       this.user.listPetItems.push(this.data);
@@ -44,7 +44,7 @@ export class PetshopCardComponent implements OnInit {
           this.id
         )
         .then(() => {
-          M.toast({html: 'Purchase successful!',classes: 'rounded'})
+          M.toast({html: 'Purchase successful!',classes: 'rounded teal'})
         });
     }
   }
