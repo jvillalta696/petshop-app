@@ -4,6 +4,7 @@ import { ProductService } from 'src/app/Services/Database/product.service';
 import { UserProfileService } from 'src/app/Services/Database/user-profile.service';
 import { UserAuthService } from 'src/app/Services/user-auth.service';
 import { IPetshopCard } from './ipetshop-card.metadata';
+import * as M from "materialize-css";
 
 @Component({
   selector: 'app-petshop-card',
@@ -33,7 +34,7 @@ export class PetshopCardComponent implements OnInit {
       this.currentUser
         .updateUserProfile({ listPetItems: [this.data] }, this.id)
         .then(() => {
-          alert('Item agregado con exito');
+          M.toast({html: 'Purchase successful!',classes: 'rounded'})
         });
     } else {
       this.user.listPetItems.push(this.data);
@@ -43,7 +44,7 @@ export class PetshopCardComponent implements OnInit {
           this.id
         )
         .then(() => {
-          alert('Item agregado con exito');
+          M.toast({html: 'Purchase successful!',classes: 'rounded'})
         });
     }
   }

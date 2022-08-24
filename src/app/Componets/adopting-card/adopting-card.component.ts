@@ -33,14 +33,14 @@ user?:UserProfile;
     if(this.user?.listPetAdoptions === undefined){
       this.currentUser.updateUserProfile({listPetAdoptions: [this.data]},this.id).then(()=>{        
         this.currentPet.updatePets({status:false},this.data?.id).then(()=>{
-          alert('Mascota adoptada con exito')
+          
         })
       })
     }else{      
       this.user.listPetAdoptions.push(this.data)
       this.currentUser.updateUserProfile({listPetAdoptions: this.user.listPetAdoptions},this.id).then(()=>{        
         this.currentPet.updatePets({status:false},this.data?.id).then(()=>{
-          alert('Mascota adoptada con exito')
+          
         })
       })     
     }
