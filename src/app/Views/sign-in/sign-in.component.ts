@@ -31,7 +31,15 @@ export class SignInComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const options ={
+      yearRange:50
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(elems, options);
+    });
+  }
 
   
   
@@ -46,8 +54,9 @@ export class SignInComponent implements OnInit {
     console.log(resp)
     alert('Create Account Successfully');
     this.router.navigate(['']);
-    } catch (error) {
-      console.log(error)
+    } catch (err:any) {
+      M.toast({html: err.toString(),classes: 'rounded red darken-1'})
+      console.log(err)
     }
     
   }  
