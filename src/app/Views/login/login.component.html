@@ -3,14 +3,14 @@
     <img src="../../../assets/images/MyPetShop.png" alt="" style="height: 45px; width: 270px; position: absolute; left: 155px; top: 120px; z-index: 1;">
 </div>
 
-<div class="row center-align">
-    <div class="col s5"></div>
-        
-    <div class="col s5"> 
-        <div >
+<div class="row center-align">        
+    <div class="col s12 l4 offset-l6"> 
+        <div class="row">
+          <div class="col s12">
             <h6 style="font-size: 35px; color: #F1CBB1;"><b>Log in</b></h6>
+          </div>            
         </div>
-        <form class="col s12" [formGroup]="loginForm">            
+        <form class="row" [formGroup]="loginForm">            
               <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
                 <input id="icon_prefix" formControlName="email" type="text" class="validate">
@@ -22,8 +22,8 @@
                 <label for="con_vpn_key">Password</label>
               </div> 
               <div class="row">
-                <div class="col s12 m6"><a class="waves-effect waves-light btn" (click)="[signin()]"><i class="material-icons left">login</i>Ingresar</a></div>
-                <div class="col s12 m6"><a class="waves-effect waves-light btn" (click)="[signup()]"><i class="material-icons left">person_add</i>Registrar</a></div>
+                <div class="col s6"><a class="waves-effect waves-light btn" (click)="[signin()]"><i class="material-icons left">login</i>Ingresar</a></div>
+                <div class="col s6"><a class="waves-effect waves-light btn" (click)="[signup()]"><i class="material-icons left">person_add</i>Registrar</a></div>
               </div>           
         </form>      
     </div>

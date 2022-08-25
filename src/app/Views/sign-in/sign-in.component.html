@@ -1,51 +1,127 @@
 <div class="col s12">
-  <img src="../../../assets/images/Vector2.png" style="height: 245px; width: 100%" alt="">
-  <img src="../../../assets/images/MyPetShop.png" style="height: 45px; width: 270px; position: absolute; left: 155px; top: 120px; z-index: 1;" alt="">
+  <img
+    src="../../../assets/images/Vector2.png"
+    style="height: 245px; width: 100%"
+    alt=""
+  />
+  <img
+    src="../../../assets/images/MyPetShop.png"
+    style="
+      height: 45px;
+      width: 270px;
+      position: absolute;
+      left: 155px;
+      top: 120px;
+      z-index: 1;
+    "
+    alt=""
+  />
 </div>
 
 <div class="row center-align">
-    <div class="col s5"></div>
-
-    <div class="col s5"> 
-        <div >
-            <h6 style="font-size: 35px; color: #F1CBB1;"><b>Create an account</b></h6>
-        </div>
-        <form class="col s12" [formGroup]="formulario">            
-              <div class="input-field col s12">
-                <i class="material-icons prefix">person</i>
-                <input id="icon_person" formControlName="fullName" type="text" class="validate">
-                <label for="icon_person">Full name</label>
-              </div>
-              <div class="input-field col s6">
-                <i class="material-icons prefix">cake</i>
-                <input id="con_cake" formControlName="dateBirth" type="text" class="validate datepicker">
-                <label for="con_cake">Date of birth</label>
-              </div>  
-              <div class="input-field col s6">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="con_account_circle" formControlName="username" type="text" class="validate">
-                <label for="con_account_circle">Username</label>
-              </div>   
-              <div class="input-field col s6">
-                <i class="material-icons prefix">vpn_key</i>
-                <input id="icon_vpn_key" formControlName="password" type="password" class="validate">
-                <label for="icon_vpn_key">Password</label>
-              </div>   
-              <div class="input-field col s6">
-                <i class="material-icons prefix">email</i>
-                <input id="con_email" formControlName="email" type="text" class="validate">
-                <label for="con_email">Email</label>
-              </div>   
-              <div class="row">                
-                <div class="col s12 m12"><a class="waves-effect waves-light btn" (click)="[onSubmit()]"><i class="material-icons left">person_add</i>Crear cuenta</a></div>
-              </div>         
-        </form>      
+  <div class="col s12 m12 l4 offset-l6">
+    <div class="row">
+      <div class="col s12">
+        <h6 style="font-size: 35px; color: #f1cbb1">
+          <b>Create an account</b>
+        </h6>
+      </div>
     </div>
+    <form [formGroup]="formulario">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">person</i>
+          <input
+            id="icon_person"
+            formControlName="fullName"
+            type="text"
+            class="validate"
+          />
+          <label for="icon_person">Full name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">cake</i>
+          <input
+            id="con_cake"
+            formControlName="dateBirth"
+            type="text"
+            class="validate datepicker"
+          />
+          <label for="con_cake">Date of birth</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">account_circle</i>
+          <input
+            id="con_account_circle"
+            formControlName="username"
+            type="text"
+            class="validate"
+          />
+          <label for="con_account_circle">Username</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">vpn_key</i>
+          <input
+            id="icon_vpn_key"
+            formControlName="password"
+            type="password"
+            class="validate"
+          />
+          <label for="icon_vpn_key">Password</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">email</i>
+          <input
+            id="con_email"
+            formControlName="email"
+            type="text"
+            class="validate"
+          />
+          <label for="con_email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <a class="waves-effect waves-light btn" (click)="[onSubmit()]"
+            ><i class="material-icons left">person_add</i>Crear cuenta</a
+          >
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
 <div class="col s12">
-  <img src="../../../assets/images/Vector11.png" style="height: 250px; width: 115px; position: absolute; left: 250px; top: 490px;" alt="">
-  <img src="../../../assets/images/Vector12.png" style="height: 220px; width: 110px; position: absolute; left: 390px; top: 565px;" alt="">
-  <img src="../../../assets/images/Vector3.png" style="height: 205px; width: 100%" alt="">
+  <img
+    src="../../../assets/images/Vector11.png"
+    style="
+      height: 250px;
+      width: 115px;
+      position: absolute;
+      left: 250px;
+      top: 490px;
+    "
+    alt=""
+  />
+  <img
+    src="../../../assets/images/Vector12.png"
+    style="
+      height: 220px;
+      width: 110px;
+      position: absolute;
+      left: 390px;
+      top: 565px;
+    "
+    alt=""
+  />
+  <img
+    src="../../../assets/images/Vector3.png"
+    style="height: 205px; width: 100%"
+    alt=""
+  />
 </div>
-
