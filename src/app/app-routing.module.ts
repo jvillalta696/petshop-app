@@ -21,6 +21,10 @@ const routes: Routes = [
     ...canActivate(()=>redirectUnauthorizedTo(['login'])),
     children:[
       {
+        path:"",
+        component:MainComponent
+      },
+      {
         path:"petadopter",
         component:PetAdopterComponent
       },
